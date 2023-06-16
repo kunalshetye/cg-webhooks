@@ -28,6 +28,7 @@ export async function sendRequest(url, appKey, appSecret, method, headers, body)
     headers: {
       "Authorization": authHeader,
       "Accept": "application/json",
+      "Content-Type": "application/json"
     },
     body: stringifiedBody
   };
