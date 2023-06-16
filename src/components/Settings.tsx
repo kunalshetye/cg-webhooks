@@ -18,6 +18,17 @@ export default function Settings({ webhookHandler }){
         })
     }
 
+    const handleRegisterWebhook = async function(){
+      sendRequest(url, appKey, appSecret, "GET")
+      .then((res) => {
+          console.log(res);
+          return res.json()
+      })
+      .then((data) => {
+          webhookHandler(data);
+      })
+  }
+
     useEffect(() => {
             if(appKey != "") localStorage.setItem("appKey", appKey);
             if(appSecret != "") localStorage.setItem("appSecret", appSecret);
