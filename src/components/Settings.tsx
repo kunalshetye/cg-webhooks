@@ -88,13 +88,13 @@ export default function Settings({ url, setUrl, appKey, setAppKey, appSecret, se
         </div>
         <div className="flex flex-col m-4 md:flex-row md:space-x-8">
           <div className="m-2">
-            <label htmlFor="url" className="block font-medium text-gray-700 mb-3">
+            <label htmlFor="webhookurl" className="block font-medium text-gray-700 mb-3">
               Webhook URL (which will be invoked by Content Graph)
             </label>
 
             <input
               type="text"
-              id="url"
+              id="webhookurl"
               className="h-10 w-96 rounded-md border-2 border-purple-400 shadow focus:shadow-xl"
               value={addWebhookUrl}
               onChange={(event) => setAddWebhookUrl(event.target.value)}
