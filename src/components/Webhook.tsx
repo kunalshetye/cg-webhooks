@@ -1,3 +1,4 @@
+// @ts-ignore
 export default function Webhook({ data }){
     return(
         <div className="m-2 relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">

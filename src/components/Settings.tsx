@@ -2,10 +2,11 @@
 import { useEffect, useState } from "react";
 import { sendRequest } from "../lib/hmac";
 
+// @ts-ignore
 export default function Settings({ webhookHandler }){
     const [url, setUrl] = useState("https://cg.optimizely.com/api/webhooks");
-    const [appKey, setAppKey] = useState(localStorage !== undefined ? localStorage.getItem("appKey") || "" : "");
-    const [appSecret, setAppSecret] = useState(localStorage !== undefined ? localStorage.getItem("appSecret") || "" : "");
+    const [appKey, setAppKey] = useState(typeof window !== "undefined" ? localStorage.getItem("appKey") || "" : "");
+    const [appSecret, setAppSecret] = useState(typeof window !== "undefined" ? localStorage.getItem("appSecret") || "" : "");
 
     const handleListWebhooks = async function(){
         sendRequest(url, appKey, appSecret, "GET")
