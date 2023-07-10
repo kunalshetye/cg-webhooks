@@ -7,7 +7,7 @@ export default function Webhook({ data, webhookDeleteHandler}){
               <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
                 {data.id}
               </h5>
-              <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+              <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased break-words">
                 <span className="font-bold">Url:</span> {data.request.url}
               </p>
             </div>
